@@ -5,7 +5,7 @@ import Category from '@/models/Category';
 import Product from '@/models/Product';
 import Coupon from '@/models/Coupon';
 
-export async function POST() {
+async function seedDatabase() {
   try {
     await connectDB();
 
@@ -334,4 +334,12 @@ export async function POST() {
       { status: 500 }
     );
   }
+}
+
+export async function POST() {
+  return seedDatabase();
+}
+
+export async function GET() {
+  return seedDatabase();
 }
