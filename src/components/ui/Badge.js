@@ -1,3 +1,5 @@
+'use client';
+
 export default function Badge({ children, variant = 'default', className = '' }) {
   const variants = {
     default: 'bg-gray-100 text-gray-800',

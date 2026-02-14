@@ -1,3 +1,5 @@
+'use client';
+
 export default function Spinner({ size = 'md', className = '' }) {
   const sizes = {
     sm: 'h-4 w-4',
