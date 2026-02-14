@@ -1,3 +1,5 @@
+'use client';
+
 export function formatPrice(amount) {
   return new Intl.NumberFormat('en-PK', {
     style: 'currency',

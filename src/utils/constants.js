@@ -1,4 +1,6 @@
-export const APP_NAME = 'WSCF Store';
+'use client';
+
+export const APP_NAME = 'Ankerhub';
 export const WHATSAPP_NUMBER = '+92XXXXXXXXXX';
 export const CURRENCY = 'PKR';
 export const SHIPPING_COST = 200;
