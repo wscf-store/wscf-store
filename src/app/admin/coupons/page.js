@@ -9,8 +9,9 @@ import Modal from '@/components/ui/Modal';
 import Spinner from '@/components/ui/Spinner';
 import Badge from '@/components/ui/Badge';
 import { formatPrice } from '@/utils/formatPrice';
+import { AdminGuard } from '@/components/admin/AdminGuard';
 
-export default function AdminCouponsPage() {
+function AdminCouponsContent() {
   const [coupons, setCoupons] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
@@ -395,5 +396,13 @@ export default function AdminCouponsPage() {
         </form>
       </Modal>
     </div>
+  );
+}
+
+export default function AdminCouponsPage() {
+  return (
+    <AdminGuard>
+      <AdminCouponsContent />
+    </AdminGuard>
   );
 }

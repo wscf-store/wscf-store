@@ -9,8 +9,9 @@ import Modal from '@/components/ui/Modal';
 import Spinner from '@/components/ui/Spinner';
 import { formatPrice } from '@/utils/formatPrice';
 import { ORDER_STATUSES } from '@/utils/constants';
+import { AdminGuard } from '@/components/admin/AdminGuard';
 
-export default function AdminOrdersPage() {
+function AdminOrdersContent() {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');

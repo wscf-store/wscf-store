@@ -18,8 +18,9 @@ import Modal from '@/components/ui/Modal';
 import Spinner from '@/components/ui/Spinner';
 import Badge from '@/components/ui/Badge';
 import { formatPrice } from '@/utils/formatPrice';
+import { AdminGuard } from '@/components/admin/AdminGuard';
 
-export default function AdminProductsPage() {
+function AdminProductsContent() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -592,5 +593,13 @@ export default function AdminProductsPage() {
         </form>
       </Modal>
     </div>
+  );
+}
+
+export default function AdminProductsPage() {
+  return (
+    <AdminGuard>
+      <AdminProductsContent />
+    </AdminGuard>
   );
 }

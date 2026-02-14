@@ -17,8 +17,9 @@ import Input from '@/components/ui/Input';
 import Modal from '@/components/ui/Modal';
 import Spinner from '@/components/ui/Spinner';
 import Badge from '@/components/ui/Badge';
+import { AdminGuard } from '@/components/admin/AdminGuard';
 
-export default function AdminCategoriesPage() {
+function AdminCategoriesContent() {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
@@ -347,5 +348,13 @@ export default function AdminCategoriesPage() {
         </form>
       </Modal>
     </div>
+  );
+}
+
+export default function AdminCategoriesPage() {
+  return (
+    <AdminGuard>
+      <AdminCategoriesContent />
+    </AdminGuard>
   );
 }
