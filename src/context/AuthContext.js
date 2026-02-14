@@ -9,13 +9,17 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [token, setToken] = useState(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     checkAuth();
   }, []);
 
   const checkAuth = async () => {
     try {
+      if (typeof window === 'undefined') return;
+      
       const savedToken = Cookies.get('token') || localStorage.getItem('token');
       if (!savedToken) {
         setLoading(false);
@@ -24,6 +28,7 @@ export function AuthProvider({ children }) {
 
       const res = await fetch('/api/auth/me', {
         headers: { Authorization: `Bearer ${savedToken}` },
+        cache: 'no-store',
       });
 
       if (res.ok) {
@@ -36,6 +41,7 @@ export function AuthProvider({ children }) {
       }
     } catch (error) {
       console.error('Auth check failed:', error);
+      setLoading(false);
     } finally {
       setLoading(false);
     }
