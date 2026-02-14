@@ -8,8 +8,16 @@ import Badge from '@/components/ui/Badge';
 import Modal from '@/components/ui/Modal';
 import Spinner from '@/components/ui/Spinner';
 import { formatPrice } from '@/utils/formatPrice';
-import { ORDER_STATUSES } from '@/utils/constants';
 import { AdminGuard } from '@/components/admin/AdminGuard';
+
+const ORDER_STATUSES = [
+  { value: 'pending', label: 'Pending', color: 'bg-yellow-100 text-yellow-800' },
+  { value: 'confirmed', label: 'Confirmed', color: 'bg-blue-100 text-blue-800' },
+  { value: 'processing', label: 'Processing', color: 'bg-indigo-100 text-indigo-800' },
+  { value: 'shipped', label: 'Shipped', color: 'bg-purple-100 text-purple-800' },
+  { value: 'delivered', label: 'Delivered', color: 'bg-green-100 text-green-800' },
+  { value: 'cancelled', label: 'Cancelled', color: 'bg-red-100 text-red-800' },
+];
 
 function AdminOrdersContent() {
   const [orders, setOrders] = useState([]);
