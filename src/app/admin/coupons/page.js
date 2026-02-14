@@ -8,8 +8,16 @@ import Input from '@/components/ui/Input';
 import Modal from '@/components/ui/Modal';
 import Spinner from '@/components/ui/Spinner';
 import Badge from '@/components/ui/Badge';
-import { formatPrice } from '@/utils/formatPrice';
 import { AdminGuard } from '@/components/admin/AdminGuard';
+
+const formatPrice = (amount) => {
+  return new Intl.NumberFormat('en-PK', {
+    style: 'currency',
+    currency: 'PKR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(amount);
+};
 
 function AdminCouponsContent() {
   const [coupons, setCoupons] = useState([]);

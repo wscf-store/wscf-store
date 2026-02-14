@@ -7,7 +7,6 @@ import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
 import Modal from '@/components/ui/Modal';
 import Spinner from '@/components/ui/Spinner';
-import { formatPrice } from '@/utils/formatPrice';
 import { AdminGuard } from '@/components/admin/AdminGuard';
 
 const ORDER_STATUSES = [
@@ -18,6 +17,15 @@ const ORDER_STATUSES = [
   { value: 'delivered', label: 'Delivered', color: 'bg-green-100 text-green-800' },
   { value: 'cancelled', label: 'Cancelled', color: 'bg-red-100 text-red-800' },
 ];
+
+const formatPrice = (amount) => {
+  return new Intl.NumberFormat('en-PK', {
+    style: 'currency',
+    currency: 'PKR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(amount);
+};
 
 function AdminOrdersContent() {
   const [orders, setOrders] = useState([]);
