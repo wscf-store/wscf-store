@@ -39,10 +39,11 @@ function AdminCouponsContent() {
       });
       if (res.ok) {
         const data = await res.json();
-        setCoupons(data);
+        setCoupons(data.coupons || []);
       }
     } catch (error) {
       console.error('Error:', error);
+      setCoupons([]);
     } finally {
       setLoading(false);
     }
