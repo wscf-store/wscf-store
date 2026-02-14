@@ -9,8 +9,12 @@ export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
   const [coupon, setCoupon] = useState(null);
   const [couponDiscount, setCouponDiscount] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+    if (typeof window === 'undefined') return;
+    
     const savedCart = localStorage.getItem('ankerhub-cart');
     if (savedCart) {
       try {
@@ -22,8 +26,9 @@ export function CartProvider({ children }) {
   }, []);
 
   useEffect(() => {
+    if (!mounted || typeof window === 'undefined') return;
     localStorage.setItem('ankerhub-cart', JSON.stringify(cart));
-  }, [cart]);
+  }, [cart, mounted]);
 
   const addToCart = useCallback((product, quantity = 1) => {
     setCart((prev) => {
