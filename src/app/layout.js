@@ -19,11 +19,11 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata = {
   title: {
-    default: 'WSCF Store - Premium Mobile Accessories in Pakistan',
-    template: '%s | WSCF Store',
+    default: 'Ankerhub - Premium Mobile Accessories in Pakistan',
+    template: '%s | Ankerhub',
   },
   description:
-    'Shop premium mobile accessories at WSCF Store. Smartphones, power banks, cables, chargers, phone cases, and earbuds. Free delivery across Pakistan on orders above PKR 5,000.',
+    'Shop premium mobile accessories at Ankerhub. Smartphones, power banks, cables, chargers, phone cases, and earbuds. Free delivery across Pakistan on orders above PKR 5,000.',
   keywords: [
     'mobile accessories',
     'smartphones Pakistan',
@@ -32,20 +32,20 @@ export const metadata = {
     'chargers',
     'phone cases',
     'earbuds',
-    'WSCF Store',
+    'Ankerhub',
     'online shopping Pakistan',
   ],
-  authors: [{ name: 'WSCF Store' }],
+  authors: [{ name: 'Ankerhub' }],
   openGraph: {
-    title: 'WSCF Store - Premium Mobile Accessories',
+    title: 'Ankerhub - Premium Mobile Accessories',
     description: 'Your trusted destination for premium mobile accessories in Pakistan.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'WSCF Store',
+    siteName: 'Ankerhub',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WSCF Store - Premium Mobile Accessories',
+    title: 'Ankerhub - Premium Mobile Accessories',
     description: 'Your trusted destination for premium mobile accessories in Pakistan.',
   },
   robots: {
