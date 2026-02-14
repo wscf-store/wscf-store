@@ -18,7 +18,10 @@ export function AuthProvider({ children }) {
 
   const checkAuth = async () => {
     try {
-      if (typeof window === 'undefined') return;
+      if (typeof window === 'undefined') {
+        setLoading(false);
+        return;
+      }
       
       const savedToken = Cookies.get('token') || localStorage.getItem('token');
       if (!savedToken) {
@@ -26,22 +29,34 @@ export function AuthProvider({ children }) {
         return;
       }
 
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+
       const res = await fetch('/api/auth/me', {
         headers: { Authorization: `Bearer ${savedToken}` },
         cache: 'no-store',
+        signal: controller.signal,
       });
+
+      clearTimeout(timeoutId);
 
       if (res.ok) {
         const data = await res.json();
         setUser(data.user);
         setToken(savedToken);
       } else {
+        console.log('Auth check failed with status:', res.status);
         Cookies.remove('token');
         localStorage.removeItem('token');
+        setUser(null);
+        setToken(null);
       }
     } catch (error) {
-      console.error('Auth check failed:', error);
-      setLoading(false);
+      console.error('Auth check error:', error?.message);
+      Cookies.remove('token');
+      localStorage.removeItem('token');
+      setUser(null);
+      setToken(null);
     } finally {
       setLoading(false);
     }
