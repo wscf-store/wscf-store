@@ -76,7 +76,7 @@ export default function ContactPage() {
                 {
                   icon: IoMail,
                   title: 'Email',
-                  content: 'support@wscfstore.com',
+                  content: 'support@ankerhub.com',
                   color: 'bg-purple-100 text-purple-600',
                 },
                 {

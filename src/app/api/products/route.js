@@ -73,7 +73,7 @@ export async function GET(request) {
       .limit(limit)
       .lean();
 
-    return NextResponse.json({
+    const response = NextResponse.json({
       products,
       pagination: {
         page,
@@ -82,6 +82,13 @@ export async function GET(request) {
         pages: Math.ceil(total / limit),
       },
     });
+    
+    // Disable caching for products API
+    response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    response.headers.set('Pragma', 'no-cache');
+    response.headers.set('Expires', '0');
+    
+    return response;
   } catch (error) {
     console.error('Get products error:', error);
     return NextResponse.json(

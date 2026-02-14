@@ -1,8 +1,6 @@
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
-import { Toaster } from 'react-hot-toast';
-import { AuthProvider } from '@/context/AuthContext';
-import { CartProvider } from '@/context/CartContext';
+import { Providers } from '@/components/layout/Providers';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/layout/WhatsAppButton';
@@ -60,39 +58,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${plusJakarta.variable}`}>
       <body className="font-sans min-h-screen flex flex-col bg-white text-gray-900 antialiased">
-        <AuthProvider>
-          <CartProvider>
-            <Toaster
-              position="top-center"
-              toastOptions={{
-                duration: 3000,
-                style: {
-                  background: '#0F172A',
-                  color: '#fff',
-                  borderRadius: '12px',
-                  padding: '12px 20px',
-                  fontSize: '14px',
-                },
-                success: {
-                  iconTheme: {
-                    primary: '#10B981',
-                    secondary: '#fff',
-                  },
-                },
-                error: {
-                  iconTheme: {
-                    primary: '#EF4444',
-                    secondary: '#fff',
-                  },
-                },
-              }}
-            />
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-            <WhatsAppButton />
-          </CartProvider>
-        </AuthProvider>
+        <Providers>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </Providers>
       </body>
     </html>
   );

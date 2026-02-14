@@ -133,10 +133,10 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <IoMailOutline className="h-5 w-5 text-accent shrink-0" />
                 <a
-                  href="mailto:support@wscfstore.com"
+                  href="mailto:support@ankerhub.com"
                   className="text-gray-400 text-sm hover:text-white transition-colors"
                 >
-                  support@wscfstore.com
+                  support@ankerhub.com
                 </a>
               </li>
             </ul>

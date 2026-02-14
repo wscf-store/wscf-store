@@ -11,18 +11,18 @@ export function CartProvider({ children }) {
   const [couponDiscount, setCouponDiscount] = useState(0);
 
   useEffect(() => {
-    const savedCart = localStorage.getItem('wscf-cart');
+    const savedCart = localStorage.getItem('ankerhub-cart');
     if (savedCart) {
       try {
         setCart(JSON.parse(savedCart));
       } catch (e) {
-        localStorage.removeItem('wscf-cart');
+        localStorage.removeItem('ankerhub-cart');
       }
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('wscf-cart', JSON.stringify(cart));
+    localStorage.setItem('ankerhub-cart', JSON.stringify(cart));
   }, [cart]);
 
   const addToCart = useCallback((product, quantity = 1) => {
@@ -83,7 +83,7 @@ export function CartProvider({ children }) {
     setCart([]);
     setCoupon(null);
     setCouponDiscount(0);
-    localStorage.removeItem('wscf-cart');
+    localStorage.removeItem('ankerhub-cart');
   }, []);
 
   const applyCoupon = useCallback(

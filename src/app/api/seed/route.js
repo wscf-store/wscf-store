@@ -76,15 +76,15 @@ async function seedDatabase() {
     // Create products
     const sampleProducts = [
       {
-        name: 'WSCF Pro Max Smartphone 256GB',
-        description: 'Experience the future of mobile technology with the WSCF Pro Max. Featuring a stunning 6.7-inch AMOLED display, 108MP camera system, and all-day battery life. Powered by the latest Snapdragon processor for lightning-fast performance.',
+        name: 'Ankerhub Pro Max Smartphone 256GB',
+        description: 'Experience the future of mobile technology with the Ankerhub Pro Max. Featuring a stunning 6.7-inch AMOLED display, 108MP camera system, and all-day battery life. Powered by the latest Snapdragon processor for lightning-fast performance.',
         shortDescription: 'Flagship smartphone with 108MP camera and 6.7" AMOLED display',
         price: 89999,
         comparePrice: 99999,
         category: categories[0]._id,
         images: [
-          { url: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800', alt: 'WSCF Pro Max Front' },
-          { url: 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800', alt: 'WSCF Pro Max Back' },
+          { url: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800', alt: 'Ankerhub Pro Max Front' },
+          { url: 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800', alt: 'Ankerhub Pro Max Back' },
         ],
         stock: 25,
         isFeatured: true,
@@ -96,7 +96,7 @@ async function seedDatabase() {
           { key: 'Storage', value: '256GB' },
           { key: 'Battery', value: '5000mAh' },
         ],
-        tags: ['smartphone', 'flagship', '5g', 'wscf'],
+        tags: ['smartphone', 'flagship', '5g', 'ankerhub'],
         ratings: { average: 4.8, count: 124 },
       },
       {
@@ -117,8 +117,8 @@ async function seedDatabase() {
         ratings: { average: 4.5, count: 89 },
       },
       {
-        name: 'WSCF PowerVault 20000mAh',
-        description: 'Never run out of power again. The WSCF PowerVault packs a massive 20000mAh capacity with 65W fast charging capability. Charge your phone up to 5 times. Features USB-C PD and dual USB-A ports.',
+        name: 'Ankerhub PowerVault 20000mAh',
+        description: 'Never run out of power again. The Ankerhub PowerVault packs a massive 20000mAh capacity with 65W fast charging capability. Charge your phone up to 5 times. Features USB-C PD and dual USB-A ports.',
         shortDescription: '20000mAh power bank with 65W fast charging',
         price: 5499,
         comparePrice: 6999,
@@ -139,7 +139,7 @@ async function seedDatabase() {
         ratings: { average: 4.7, count: 210 },
       },
       {
-        name: 'WSCF PowerVault 10000mAh Slim',
+        name: 'Ankerhub PowerVault 10000mAh Slim',
         description: 'Ultra-slim power bank designed for portability. 10000mAh capacity with 22.5W fast charging. Slim enough to fit in your pocket.',
         shortDescription: 'Ultra-slim 10000mAh power bank for everyday carry',
         price: 2999,
@@ -155,7 +155,7 @@ async function seedDatabase() {
         ratings: { average: 4.4, count: 156 },
       },
       {
-        name: 'WSCF USB-C to USB-C 100W Cable (2m)',
+        name: 'Ankerhub USB-C to USB-C 100W Cable (2m)',
         description: 'Premium braided USB-C cable with 100W power delivery support. Perfect for charging laptops, phones, and tablets. Supports 10Gbps data transfer. Durable nylon braiding with 15000+ bend lifespan.',
         shortDescription: '100W USB-C cable with premium braided build',
         price: 1299,
@@ -171,7 +171,7 @@ async function seedDatabase() {
         ratings: { average: 4.6, count: 340 },
       },
       {
-        name: 'WSCF Lightning Cable MFi Certified (1.5m)',
+        name: 'Ankerhub Lightning Cable MFi Certified (1.5m)',
         description: 'Apple MFi certified Lightning cable for reliable charging and data sync. Premium aluminum connectors with braided nylon coating.',
         shortDescription: 'MFi certified Lightning cable for Apple devices',
         price: 999,
@@ -186,7 +186,7 @@ async function seedDatabase() {
         ratings: { average: 4.3, count: 87 },
       },
       {
-        name: 'WSCF TurboCharge 65W GaN Charger',
+        name: 'Ankerhub TurboCharge 65W GaN Charger',
         description: 'The smallest 65W charger on the market. GaN technology for cooler, more efficient charging. Dual USB-C ports for charging two devices simultaneously. Compatible with laptops, tablets, and phones.',
         shortDescription: 'Compact 65W GaN charger with dual USB-C ports',
         price: 3999,
@@ -208,7 +208,7 @@ async function seedDatabase() {
         ratings: { average: 4.9, count: 178 },
       },
       {
-        name: 'WSCF Wireless Charging Pad 15W',
+        name: 'Ankerhub Wireless Charging Pad 15W',
         description: 'Qi-certified wireless charging pad with 15W fast wireless charging. Sleek glass surface with anti-slip silicone ring. Compatible with all Qi-enabled devices.',
         shortDescription: '15W Qi wireless charger with elegant design',
         price: 2499,

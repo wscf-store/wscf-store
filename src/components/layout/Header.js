@@ -86,8 +86,8 @@ export default function Header() {
           <p className="hidden sm:block">Free shipping on orders above PKR 5,000</p>
           <p className="sm:hidden text-center w-full">Free shipping above PKR 5,000</p>
           <div className="hidden sm:flex items-center gap-4">
-            <a href="mailto:support@wscfstore.com" className="hover:text-blue-300 transition-colors">
-              support@wscfstore.com
+            <a href="mailto:support@ankerhub.com" className="hover:text-blue-300 transition-colors">
+              support@ankerhub.com
             </a>
             <span>|</span>
             <a href="tel:+92XXXXXXXXXX" className="hover:text-blue-300 transition-colors">
@@ -110,11 +110,11 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
               <div className="w-10 h-10 bg-gradient-to-br from-accent to-blue-700 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow">
-                <span className="text-white font-bold text-lg">W</span>
+                <span className="text-white font-bold text-lg">A</span>
               </div>
               <div>
                 <h1 className="text-xl font-bold text-primary-900 tracking-tight">
-                  WSCF <span className="text-accent">Store</span>
+                  Ankerhub
                 </h1>
               </div>
             </Link>

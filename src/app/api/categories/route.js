@@ -20,7 +20,14 @@ export async function GET() {
       })
     );
 
-    return NextResponse.json({ categories: categoriesWithCounts });
+    const response = NextResponse.json({ categories: categoriesWithCounts });
+    
+    // Disable caching for categories API
+    response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    response.headers.set('Pragma', 'no-cache');
+    response.headers.set('Expires', '0');
+    
+    return response;
   } catch (error) {
     console.error('Get categories error:', error);
     return NextResponse.json(

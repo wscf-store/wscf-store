@@ -16,7 +16,12 @@ export default function FeaturedProducts() {
 
   const fetchFeatured = async () => {
     try {
-      const res = await fetch('/api/products?featured=true&limit=8');
+      const res = await fetch('/api/products?featured=true&limit=8', {
+        cache: 'no-store',
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+        },
+      });
       const data = await res.json();
       setProducts(data.products || []);
     } catch (error) {

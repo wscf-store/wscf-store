@@ -143,11 +143,12 @@ export default function AdminProductsPage() {
       });
       if (res.ok) {
         const data = await res.json();
+        const uploadedImages = data.images || data.urls || [];
         setFormData((prev) => ({
           ...prev,
-          images: [...prev.images, ...data.urls],
+          images: [...prev.images, ...uploadedImages],
         }));
-        toast.success(`${data.urls.length} image(s) uploaded`);
+        toast.success(`${uploadedImages.length} image(s) uploaded`);
       } else {
         toast.error('Image upload failed');
       }
@@ -310,10 +311,10 @@ export default function AdminProductsPage() {
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
-                          {product.images?.[0] ? (
+                          {product.images?.[0]?.url || product.images?.[0] ? (
                             <Image
-                              src={product.images[0]}
-                              alt={product.name}
+                              src={product.images[0]?.url || product.images[0]}
+                              alt={product.images[0]?.alt || product.name}
                               width={48}
                               height={48}
                               className="w-full h-full object-cover"

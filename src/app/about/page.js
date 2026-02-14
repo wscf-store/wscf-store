@@ -1,8 +1,8 @@
 import { IoShieldCheckmark, IoRocket, IoHeart, IoPeople, IoStar } from 'react-icons/io5';
 
 export const metadata = {
-  title: 'About Us - WSCF Store',
-  description: 'Learn about WSCF Store - Pakistan\'s trusted destination for premium mobile accessories.',
+  title: 'About Us - Ankerhub',
+  description: 'Learn about Ankerhub - Pakistan\'s trusted destination for premium mobile accessories.',
 };
 
 export default function AboutPage() {
@@ -11,7 +11,7 @@ export default function AboutPage() {
       {/* Hero */}
       <div className="bg-primary-900 py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">About WSCF Store</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">About Ankerhub</h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Pakistan&apos;s most trusted destination for premium mobile accessories, smartphones, and tech gadgets since 2020.
           </p>
@@ -23,7 +23,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-primary-900 mb-6">Our Story</h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-6">
-            WSCF Store was founded with a simple mission: to provide Pakistani consumers with genuine,
+            Ankerhub was founded with a simple mission: to provide Pakistani consumers with genuine,
             high-quality mobile accessories at fair prices. We noticed that the market was flooded with
             counterfeit products that break within weeks, and we wanted to change that.
           </p>

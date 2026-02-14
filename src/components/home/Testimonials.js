@@ -21,7 +21,7 @@ const testimonials = [
     name: 'Muhammad Ali',
     location: 'Lahore',
     rating: 5,
-    text: 'I have been buying from WSCF Store for 6 months now. Their cables are the most durable I have ever used. Customer service is also very responsive on WhatsApp.',
+    text: 'I have been buying from Ankerhub for 6 months now. Their cables are the most durable I have ever used. Customer service is also very responsive on WhatsApp.',
     avatar: 'M',
   },
   {

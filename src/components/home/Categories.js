@@ -32,7 +32,12 @@ export default function Categories() {
 
   const fetchCategories = async () => {
     try {
-      const res = await fetch('/api/categories');
+      const res = await fetch('/api/categories', {
+        cache: 'no-store',
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+        },
+      });
       const data = await res.json();
       setCategories(data.categories || []);
     } catch (error) {

@@ -42,10 +42,10 @@ function LoginContent() {
         <div className="bg-white rounded-2xl border border-gray-100 shadow-xl p-8">
           <div className="text-center mb-8">
             <div className="w-14 h-14 bg-gradient-to-br from-accent to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/30">
-              <span className="text-white font-bold text-xl">W</span>
+              <span className="text-white font-bold text-xl">A</span>
             </div>
             <h1 className="text-2xl font-bold text-primary-900">Welcome Back</h1>
-            <p className="text-gray-500 mt-1">Sign in to your WSCF Store account</p>
+            <p className="text-gray-500 mt-1">Sign in to your Ankerhub account</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
